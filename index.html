@@ -3,17 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portofolio - Muhammad Ihsanul Fikri</title>
 
     <!--CSS External-->
     <link rel="stylesheet" href="css\style.css" />
+
+    <!--TailWind CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
+
   <body>
-    <header></header>
+    <header class="main-header p-[8px]">
+      <!-- Logo Website -->
 
-    <main></main>
+      <div class="logo-icon"></div>
 
-    <footer></footer>
+      <!-- Nav Bar Website -->
+      <nav>
+        <ul class="flex">
+          <li>
+            <a class="border p-[8px] rounded" href="#home">Home</a>
+            <a class="border p-[8px] rounded" href="#profile">Our Profile</a>
+            <a class="border p-[8px] rounded" href="#portofolio">Portofolio</a>
+            <a class="border p-[8px] rounded" href="#message-us">Message Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <section id="home" class="min-h-screen flex items-center justify-center">
+        <h1 class="text-4xl font bold">
+          Welcome <span id="welcome-user">User</span>, To my Portofolio
+        </h1>
+      </section>
+
+      <section id="profile" class="min-h-screen flex justify-center">
+        <h2 class="text-3xl font bold">Our Profile</h2>
+      </section>
+
+      <section
+        id="portofolio"
+        class="min-h-screen flex items-center justify-center"
+      >
+        <h2 class="text-3xl font bold">Portofolio</h2>
+      </section>
+
+      <section
+        id="message-us"
+        class="min-h-screen flex flex-col items-center justify-evenly"
+      >
+        <h2 class="text-3xl font bold">Message Us</h2>
+
+        <form class="mt-4">
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Name :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="border p-2 w-full"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border p-2 w-full"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block mb-2">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="border p-2 w-full"
+              rows="4"
+            ></textarea>
+          </div>
+          <button
+            type="button"
+            onclick="validateForm();"
+            class="bg-blue-500 text-white p-2 rounded"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="text-center p-[16px] bg-gray-200">
+        &copy; 2025 Ihsanul Fikri. All rights reserved.
+      </div>
+    </footer>
 
     <!--JS EXTERNAL-->
     <script src="js\script.js"></script>
