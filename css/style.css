@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
-  --bg-dark: #0f172a;
-  --bg-light: #1e293b;
+  --bg-dark: #3a3d46;
+  --bg-light: #2f394b;
   --primary: #38bdf8;
-  --primary-hover: #0284c7;
+  --primary-hover: #44687a;
   --text-light: #f8fafc;
   --text-muted: #94a3b8;
 }
