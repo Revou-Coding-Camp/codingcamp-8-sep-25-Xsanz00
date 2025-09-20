@@ -1,108 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio - Muhammad Ihsanul Fikri</title>
-
-    <!--CSS External-->
-    <link rel="stylesheet" href="css\style.css" />
-
-    <!--TailWind CDN-->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="main-header p-[8px]">
-      <!-- Logo Website -->
-
-      <div class="logo-icon"></div>
-
-      <!-- Nav Bar Website -->
-      <nav>
-        <ul class="flex">
-          <li>
-            <a class="border p-[8px] rounded" href="#home">Home</a>
-            <a class="border p-[8px] rounded" href="#profile">Our Profile</a>
-            <a class="border p-[8px] rounded" href="#portofolio">Portofolio</a>
-            <a class="border p-[8px] rounded" href="#message-us">Message Us</a>
-          </li>
-        </ul>
-      </nav>
+    <header>
+      <h1>Muhammad Ihsanul Fikri</h1>
+      <p>
+        Fotografer Freelance | Mahasiswa Sistem Informasi UPN "Veteran" Jawa
+        Timur
+      </p>
     </header>
 
-    <hr />
+    <section class="fade-in">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah seorang <strong>fotografer freelance</strong> dengan
+        pengalaman lebih dari <strong>5 tahun</strong> dalam mengabadikan momen
+        melalui lensa. Selain itu, saya juga seorang
+        <strong>mahasiswa Sistem Informasi di UPN "Veteran" Jawa Timur</strong>
+        yang terus mengembangkan diri di bidang teknologi informasi dan
+        multimedia.
+      </p>
+    </section>
 
-    <main>
-      <section id="home" class="min-h-screen flex items-center justify-center">
-        <h1 class="text-4xl font bold">
-          Welcome <span id="welcome-user">User</span>, To my Portofolio
-        </h1>
-      </section>
+    <section class="fade-in">
+      <h2>Pengalaman</h2>
+      <ul>
+        <li>Fotografer Freelance (2019 - sekarang)</li>
+        <li>Dokumentasi acara wisuda, pernikahan, dan event kampus</li>
+        <li>Pengeditan foto dengan Adobe Lightroom & Photoshop</li>
+      </ul>
+    </section>
 
-      <section id="profile" class="min-h-screen flex justify-center">
-        <h2 class="text-3xl font bold">Our Profile</h2>
-      </section>
-
-      <section
-        id="portofolio"
-        class="min-h-screen flex items-center justify-center"
-      >
-        <h2 class="text-3xl font bold">Portofolio</h2>
-      </section>
-
-      <section
-        id="message-us"
-        class="min-h-screen flex flex-col items-center justify-evenly"
-      >
-        <h2 class="text-3xl font bold">Message Us</h2>
-
-        <form class="mt-4">
-          <div class="mb-4">
-            <label for="name" class="block mb-2">Name :</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="border p-2 w-full"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block mb-2">Email :</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="border p-2 w-full"
-            />
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block mb-2">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              class="border p-2 w-full"
-              rows="4"
-            ></textarea>
-          </div>
-          <button
-            type="button"
-            onclick="validateForm();"
-            class="bg-blue-500 text-white p-2 rounded"
-          >
-            Send Message
-          </button>
-        </form>
-      </section>
-    </main>
+    <section class="fade-in">
+      <h2>Media Sosial</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/Ihsannulf_" target="_blank"
+          >Instagram</a
+        >
+        <a
+          href="https://www.linkedin.com/in/ihsanul-fikri-958774306"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="mailto:ihsanulfikri3176@gmail.com" target="_blank">Gmail</a>
+        <a href="https://www.instagram.com/jscrtt" target="_blank"
+          >Instagram Fotografi</a
+        >
+      </div>
+    </section>
 
     <footer>
-      <div class="text-center p-[16px] bg-gray-200">
-        &copy; 2025 Ihsanul Fikri. All rights reserved.
-      </div>
+      <p>© 2025 Muhammad Ihsanul Fikri | Dibuat dengan ❤</p>
     </footer>
 
-    <!--JS EXTERNAL-->
-    <script src="js\script.js"></script>
+    <!-- Hubungkan JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

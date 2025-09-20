@@ -1,24 +1,26 @@
-//welcomeMessage();
+// Animasi fade-in saat scroll
+const faders = document.querySelectorAll(".fade-in");
 
-function welcomeMessage() {
-  let username = prompt("Please enter your name");
-  if (username) {
-    document.getElementById("welcome-user").innerText = username;
-  }
-  console.log("Welcome to my Portofolio!");
-}
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px",
+};
 
-function validateForm() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("visible");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
 
-  if (name === "" || email === "" || message === "") {
-    alert("All fields muset be filled out");
-  } else {
-    alert("Form submitted successfully! Thank you " + name + "!");
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  }
-}
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
