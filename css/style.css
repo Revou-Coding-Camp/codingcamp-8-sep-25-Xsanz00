@@ -1,75 +1,126 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #0f172a;
-  color: #f8fafc;
-  line-height: 1.6;
+/* Import font modern */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --primary: #38bdf8;
+  --primary-hover: #0284c7;
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
 header {
-  background: #1e293b;
-  padding: 2rem;
+  background: var(--bg-light);
+  padding: 3rem 1rem;
   text-align: center;
-  border-bottom: 2px solid #38bdf8;
+  border-bottom: 1px solid var(--primary);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  color: #38bdf8;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 header p {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
+  color: var(--text-muted);
 }
 
+/* ===== SECTION ===== */
 section {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
   margin: auto;
 }
 
 h2 {
-  color: #38bdf8;
-  margin-bottom: 1rem;
-  border-left: 5px solid #38bdf8;
-  padding-left: 0.5rem;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin-top: 0.5rem;
+}
+
+/* ===== ABOUT & EXPERIENCE ===== */
+section p,
+section ul {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 0.7rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* ===== SOCIAL LINKS ===== */
+.social-links {
+  margin-top: 1rem;
 }
 
 .social-links a {
   display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  background: #38bdf8;
-  color: #0f172a;
+  margin: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: var(--bg-dark);
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  background: #0284c7;
+  background: var(--primary-hover);
   color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
 }
 
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  background: #1e293b;
-  border-top: 2px solid #38bdf8;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 1.5rem;
+  background: var(--b);
 }
